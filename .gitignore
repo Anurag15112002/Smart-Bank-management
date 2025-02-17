@@ -1,0 +1,64 @@
+# IntelliJ IDEA specific files
+.idea/
+*.iml
+
+# OS-specific files
+.DS_Store  # macOS
+Thumbs.db  # Windows
+
+# Build output
+/target/         # For Maven projects
+/.gradle/        # For Gradle projects
+/build/          # For build systems
+
+# Compiled class files
+*.class
+
+# Log files
+*.log
+
+# Maven specific files
+.mvn/
+
+# Eclipse specific files
+.classpath
+.project
+.settings/
+
+# JetBrains Rider
+.idea/
+
+# IntelliJ idea folders
+out/
+
+# JARs, WARs, and ZIPs
+*.jar
+*.war
+*.zip
+
+# Dependency directories
+/node_modules/
+
+# Database files (if applicable)
+*.db
+
+# Temporary files
+*.bak
+*.swp
+*.swo
+
+# IDE-related files that can be ignored (in case of various editors like Visual Studio Code)
+.vscode/
+
+# Gradle specific files
+gradle-wrapper.jar
+gradle-wrapper.properties
+
+# Java specific
+*.log
+
+# Mac specific files
+*.DS_Store
+
+# .env files for environment variables (optional, if you use it for sensitive data)
+.env
