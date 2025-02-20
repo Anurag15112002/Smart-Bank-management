@@ -47,11 +47,20 @@ public class BankOperations {
     }
 
     // Withdraw method using account number
-    public static void withdraw(String accountNumber, double amount) {
+    public static void withdraw(String accountNumber, double amount,boolean emergency) {
         Account account = getAccountByAccountNumber(accountNumber);
         if (account == null) {
             System.out.println("Account not found!");
             return;
+        }
+
+        if (FraudDetection.detectFraud(account, amount)) {
+            if (emergency) {
+                System.out.println("Emergency situation detected. Withdrawal allowed.");
+            } else {
+                System.out.println("Withdrawal blocked due to potential fraud.");
+                return;  // Block the withdrawal if it's not an emergency
+            }
         }
 
         if (account.getBalance() >= amount) {

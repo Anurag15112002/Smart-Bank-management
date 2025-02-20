@@ -131,8 +131,9 @@ public class Main {
         String accountNumber = scanner.nextLine();
         System.out.println("Enter withdrawal amount:");
         double withdrawalAmount = scanner.nextDouble();
-
-        BankOperations.withdraw(accountNumber, withdrawalAmount);
+        System.out.println("Enter emergency (true/false): ");
+        boolean emergency = scanner.nextBoolean();
+        BankOperations.withdraw(accountNumber, withdrawalAmount,emergency);
         waitForUserInput();
     }
 
@@ -159,6 +160,7 @@ public class Main {
                     ", Type: " + transaction.getTransactionType());
         });
         waitForUserInput();
+
     }
 
     // Wait for user input to proceed
